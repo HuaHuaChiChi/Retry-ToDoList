@@ -24,10 +24,25 @@ function TodoController() {
     }))
   }
 
+  const workingToDos = toDos.filter((todo) => !todo.isDone);
+  const doneToDos = toDos.filter((todo) => todo.isDone);
+
   return (
     <main>
       <TodoForm onsubmitTodo = {onsubmitTodo} />
-      <TodoList toDos={toDos} onDeleteTodo={onDeleteTodo} onToggleTodo={onToggleTodo}/>
+      <TodoList 
+      head={"Working"}
+      toDos={workingToDos} 
+      onDeleteTodo={onDeleteTodo} 
+      onToggleTodo={onToggleTodo}
+      />
+      <TodoList 
+      head={"Done"}
+      toDos={doneToDos} 
+      onDeleteTodo={onDeleteTodo} 
+      onToggleTodo={onToggleTodo}
+      />
+      {/* 투두리스트를 재사용 함 */}
     </main>
   )
 }
