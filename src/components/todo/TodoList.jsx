@@ -13,7 +13,7 @@ function TodoList({toDos, onDeleteTodo, onToggleTodo, head}) {
             <TodoItem 
             key={todo.id} 
             todo={todo} 
-            onDeleteTodo={onDeleteTodo} 
+            onDeleteTodo={onDeleteTodo}
             onToggleTodo={onToggleTodo}/>
           ))
         }
