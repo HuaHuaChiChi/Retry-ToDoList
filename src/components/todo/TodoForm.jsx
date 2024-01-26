@@ -12,7 +12,7 @@ function TodoForm({onsubmitTodo}) {
       title,
       content,
       isDone: false,
-      deadLine: date
+      time: date
     })
 
 //NOTE - 온 서브밋에 보내는 부분 이해가 필요할 듯 부모 컴포넌트 안에 있는 함수를 트리거 시켜서 매개변수를 자식에서 제공해주는 것이다.
